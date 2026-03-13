@@ -4,6 +4,7 @@ cd ~/Descargas/cromite/work
 echo "Download Files"
 wget -c https://github.com/uazo/cromite/releases/latest/download/chrome-lin64.tar.gz
 wget -c https://raw.githubusercontent.com/edilberto507h/cromite-installer/main/files/cromite.tar.gz
+wget -c https://raw.githubusercontent.com/edilberto507h/cromite-installer/main/icon/cromite_48x48.png
 
 if [ -f ~/Descargas/cromite/work/chrome-lin64.tar.gz ]; then
 
@@ -12,6 +13,7 @@ tar -xf chrome-lin64.tar.gz
 
 echo "Install files"
 sudo cp -r ~/Descargas/cromite/work/chrome-lin/* /usr/bin/cromite/
+sudo cp -r ~/Descargas/cromite/work/cromite_48x48.png /usr/bin/cromite/
 
     if [ ! -f ~/.local/share/applications/cromite.desktop ]; then
         echo "Install Link"
@@ -23,7 +25,7 @@ sudo cp -r ~/Descargas/cromite/work/chrome-lin/* /usr/bin/cromite/
     fi
 
 else
-echo "ERROR: Package missming"
+echo "ERROR: Package missing"
 fi
 
 echo "Remove files"
